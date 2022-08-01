@@ -8,12 +8,12 @@ A deno script to convert a section of a HTML page to markdown
 
 ## Usage with deno
 ```
-deno run --allow-read --allow-write --allow-net index.js [url]
+deno run --allow-write --allow-net index.js [url]
 ```
 
 ## Compile with deno
 ```
-deno compile --allow-read --allow-write --allow-net index.js
+deno compile --allow-write --allow-net index.js
 ```
 
 ## Be available in your linux terminal commands
@@ -32,6 +32,10 @@ DOM query selector of the section of the page to convert to markdown.
 
 If nothing is passed the hole page will be converted.
 
-### -r --remove
-DOM query selector of elements to remove before convert.
+### -i --ignore
+DOM query selector of elements to be removed before convert.
 All matches will be removed.
+
+### -f --footnote
+DOM query selector of footnotes in text.
+It will follow the link to get the text.
